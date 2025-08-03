@@ -1,12 +1,134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="output.css" />
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <title>Nexcent</title>
   </head>
-  <body></body>
+
+  <body class="text-neutral-gray">
+    <header class="text-dark-gray flex justify-between px-4 py-2.5">
+      <div>
+        <p
+          class="text-secondary flex items-center gap-1.5 p-2 text-3xl font-bold"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="17"
+            viewBox="0 0 25 17"
+            fill="none"
+          >
+            <path
+              d="M13.3106 9.17145L9.55809 15.5982L5.80565 9.17145H13.3106ZM14.3158 8.59705H4.79633L9.55809 16.7349L14.3158 8.59705Z"
+              fill="#263238"
+            />
+            <path
+              d="M19.8347 1.17808L23.5871 7.60481H16.0822L19.8347 1.17808ZM19.8347 0.0292969L15.0729 8.16715H24.5964L19.8347 0.0292969Z"
+              fill="#263238"
+            />
+            <path
+              d="M0.234009 0.0292969L4.2266 7.22725L8.58952 0.210039L0.234009 0.0292969Z"
+              fill="#4CAF4F"
+            />
+            <path
+              d="M9.55825 0.659912L13.7462 7.8177H5.36218L9.55825 0.659912Z"
+              fill="#4CAF4F"
+            />
+            <path
+              d="M14.8247 9.38037L19.0167 16.735H10.4332L14.6944 9.38037H14.8247Z"
+              fill="#4CAF4F"
+            />
+            <path
+              d="M15.7322 8.93445L19.8347 16.1766L23.9941 8.93445H15.7322Z"
+              fill="#4CAF4F"
+            />
+          </svg>
+          Nexcent
+        </p>
+      </div>
+      <div class="relative">
+        <button
+          aria-label="Open menu"
+          aria-expanded="false"
+          data-menu-toggle
+          class="menu-toggle absolute top-2 right-2 z-20 cursor-pointer"
+        >
+          <svg
+            class="stroke-primary hover:stroke-dark-gray menu-icon active:stroke-dark-gray"
+            xmlns="http://www.w3.org/2000/svg"
+            width="36"
+            height="36"
+            viewBox="0 0 24 24"
+          >
+            <path class="top-bar bar" d="M4 6L20 6" ... />
+            <path class="middle-bar bar" d="M4 12L20 12" ... />
+            <path class="bottom-bar bar" d="M4 18L20 18" ... />
+          </svg>
+        </button>
+        <nav data-menu class="menu">
+          <ul class="leading-4 font-medium">
+            <li>
+              <a
+                href="#"
+                class="hover:text-primary-tint-5 p-2 text-white hover:underline"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-primary-tint-5 p-2 text-white hover:underline"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-primary-tint-5 p-2 text-white hover:underline"
+                >Community</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-primary-tint-5 p-2 text-white hover:underline"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-primary-tint-5 p-2 text-white hover:underline"
+                >Pricing</a
+              >
+            </li>
+          </ul>
+          <button
+            class="bg-primary flex cursor-pointer items-center gap-1.5 rounded-xs px-6 py-2.5 font-light text-white"
+          >
+            Register Now
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+            >
+              <path
+                d="M8.52565 8.47046L10.2448 6.75135C10.4486 6.54747 10.4486 6.21692 10.2448 6.01304L8.52565 4.29393M10.0918 6.3822L2.43489 6.3822"
+                stroke="white"
+                stroke-width="1"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+    <script src="script.js"></script>
+  </body>
 </html>

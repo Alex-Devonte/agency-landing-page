@@ -7,10 +7,22 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --text-4xl: 2.25rem;
-    --text-4xl--line-height: calc(2.5 / 2.25);
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
+    --font-weight-light: 300;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --radius-xs: 0.125rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-dark-gray: #4d4d4d;
+    --color-neutral-gray: #717171;
+    --color-primary: #4caf4f;
+    --color-secondary: #263238;
+    --color-primary-shade-1: #43a046;
+    --color-primary-tint-5: #e8f5e9;
   }
 }
 @layer base {
@@ -159,73 +171,191 @@
   }
 }
 @layer utilities {
-  .table {
-    display: table;
+  .absolute {
+    position: absolute;
   }
-  .border-collapse {
-    border-collapse: collapse;
+  .relative {
+    position: relative;
   }
-  .resize {
-    resize: both;
+  .top-2 {
+    top: calc(var(--spacing) * 2);
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
+  .right-2 {
+    right: calc(var(--spacing) * 2);
   }
-  .font-\(family-name\:--arial\) {
-    font-family: var(--arial);
+  .z-20 {
+    z-index: 20;
   }
-  .font-\(family-name\:--georgia\) {
-    font-family: var(--georgia);
+  .flex {
+    display: flex;
   }
-  .font-\[arial\] {
-    font-family: arial;
+  .cursor-pointer {
+    cursor: pointer;
   }
-  .font-\[georgia\] {
-    font-family: georgia;
+  .items-center {
+    align-items: center;
   }
-  .font-\[helvetica\] {
-    font-family: helvetica;
+  .justify-between {
+    justify-content: space-between;
   }
-  .font-sans {
-    font-family: var(--font-sans);
+  .gap-1\.5 {
+    gap: calc(var(--spacing) * 1.5);
   }
-  .text-4xl {
-    font-size: var(--text-4xl);
-    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  .rounded-xs {
+    border-radius: var(--radius-xs);
   }
-  .underline {
-    text-decoration-line: underline;
+  .bg-primary {
+    background-color: var(--color-primary);
   }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
+  .stroke-primary {
+    stroke: var(--color-primary);
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .px-6 {
+    padding-inline: calc(var(--spacing) * 6);
+  }
+  .py-2\.5 {
+    padding-block: calc(var(--spacing) * 2.5);
+  }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .leading-4 {
+    --tw-leading: calc(var(--spacing) * 4);
+    line-height: calc(var(--spacing) * 4);
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .font-light {
+    --tw-font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-light);
+  }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .text-dark-gray {
+    color: var(--color-dark-gray);
+  }
+  .text-neutral-gray {
+    color: var(--color-neutral-gray);
+  }
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .hover\:stroke-dark-gray {
+    &:hover {
+      @media (hover: hover) {
+        stroke: var(--color-dark-gray);
+      }
+    }
+  }
+  .hover\:text-primary-tint-5 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-primary-tint-5);
+      }
+    }
+  }
+  .hover\:underline {
+    &:hover {
+      @media (hover: hover) {
+        text-decoration-line: underline;
+      }
+    }
+  }
+  .active\:stroke-dark-gray {
+    &:active {
+      stroke: var(--color-dark-gray);
+    }
   }
 }
 :root {
   font-family: Inter, sans-serif;
-  font-feature-settings: 'liga' 1, 'calt' 1;
+  font-feature-settings: "liga" 1, "calt" 1;
 }
 @supports (font-variation-settings: normal) {
   :root {
     font-family: InterVariable, sans-serif;
   }
 }
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
+.menu {
+  align-items: center;
+  background-color: var(--color-primary-shade-1);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translateY(-100%);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 2;
 }
-@property --tw-outline-style {
+.menu-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.menu-open li {
+  margin: 25px 0;
+  padding: 5px;
+}
+.menu-toggle.menu-active .menu-icon {
+  stroke: #fff !important;
+}
+.menu-toggle.menu-active .menu-icon:hover {
+  stroke: var(--color-dark-gray);
+}
+.menu-toggle.menu-active .menu-icon:active {
+  stroke: var(--color-dark-gray);
+}
+.bar {
+  stroke-linecap: round;
+  stroke-width: 3px;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: all 0.3s ease;
+}
+.menu-toggle.menu-active .top-bar {
+  transform: translateY(6px) rotate(45deg);
+}
+.menu-toggle.menu-active .middle-bar {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.3s ease;
+}
+.menu-toggle.menu-active .bottom-bar {
+  transform: translateY(-6px) rotate(-45deg);
+}
+@property --tw-leading {
   syntax: "*";
   inherits: false;
-  initial-value: solid;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
-      --tw-outline-style: solid;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
     }
   }
 }
