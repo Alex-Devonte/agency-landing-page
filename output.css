@@ -15,6 +15,9 @@
     --font-weight-medium: 500;
     --font-weight-bold: 700;
     --radius-xs: 0.125rem;
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-dark-gray: #4d4d4d;
@@ -177,6 +180,9 @@
   .relative {
     position: relative;
   }
+  .static {
+    position: static;
+  }
   .top-2 {
     top: calc(var(--spacing) * 2);
   }
@@ -189,8 +195,20 @@
   .flex {
     display: flex;
   }
+  .table {
+    display: table;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .items-center {
     align-items: center;
@@ -198,11 +216,18 @@
   .justify-between {
     justify-content: space-between;
   }
+  .gap-1 {
+    gap: calc(var(--spacing) * 1);
+  }
   .gap-1\.5 {
     gap: calc(var(--spacing) * 1.5);
   }
   .rounded-xs {
     border-radius: var(--radius-xs);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .bg-primary {
     background-color: var(--color-primary);
@@ -218,6 +243,9 @@
   }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
   }
   .py-2\.5 {
     padding-block: calc(var(--spacing) * 2.5);
@@ -254,6 +282,18 @@
   .text-white {
     color: var(--color-white);
   }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
   .hover\:stroke-dark-gray {
     &:hover {
       @media (hover: hover) {
@@ -280,6 +320,31 @@
       stroke: var(--color-dark-gray);
     }
   }
+  .lg\:\!static {
+    @media (width >= 64rem) {
+      position: static !important;
+    }
+  }
+  .lg\:static {
+    @media (width >= 64rem) {
+      position: static;
+    }
+  }
+  .lg\:hidden {
+    @media (width >= 64rem) {
+      display: none;
+    }
+  }
+  .lg\:\!opacity-100 {
+    @media (width >= 64rem) {
+      opacity: 100% !important;
+    }
+  }
+  .lg\:opacity-100 {
+    @media (width >= 64rem) {
+      opacity: 100%;
+    }
+  }
 }
 :root {
   font-family: Inter, sans-serif;
@@ -290,29 +355,37 @@
     font-family: InterVariable, sans-serif;
   }
 }
-.menu {
-  align-items: center;
-  background-color: var(--color-primary-shade-1);
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  left: 0;
-  opacity: 0;
+nav.menu {
   pointer-events: none;
   position: fixed;
-  right: 0;
-  top: 0;
-  transform: translateY(-100%);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  inset-inline: calc(var(--spacing) * 0);
+  top: calc(var(--spacing) * 0);
   z-index: 2;
+  display: flex;
+  height: 100vh;
+  --tw-translate-y: -100%;
+  translate: var(--tw-translate-x) var(--tw-translate-y);
+  transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary-shade-1);
+  opacity: 0%;
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 400ms;
+  transition-duration: 400ms;
+  --tw-ease: var(--ease-in-out);
+  transition-timing-function: var(--ease-in-out);
 }
-.menu-open {
-  opacity: 1;
+nav.menu.menu-open {
   pointer-events: auto;
-  transform: translateY(0);
+  --tw-translate-y: calc(var(--spacing) * 0);
+  translate: var(--tw-translate-x) var(--tw-translate-y);
+  opacity: 100%;
 }
-.menu-open li {
+.menu li {
   margin: 25px 0;
   padding: 5px;
 }
@@ -343,6 +416,31 @@
 .menu-toggle.menu-active .bottom-bar {
   transform: translateY(-6px) rotate(-45deg);
 }
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-leading {
   syntax: "*";
   inherits: false;
@@ -351,11 +449,51 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ease {
+  syntax: "*";
+  inherits: false;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
+      --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
+      --tw-duration: initial;
+      --tw-ease: initial;
     }
   }
 }
