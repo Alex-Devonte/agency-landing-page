@@ -7,6 +7,8 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-amber-200: oklch(92.4% 0.12 95.746);
+    --color-amber-500: oklch(76.9% 0.188 70.08);
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-3xl: 1.875rem;
@@ -180,9 +182,6 @@
   .relative {
     position: relative;
   }
-  .static {
-    position: static;
-  }
   .top-2 {
     top: calc(var(--spacing) * 2);
   }
@@ -194,6 +193,9 @@
   }
   .flex {
     display: flex;
+  }
+  .hidden {
+    display: none;
   }
   .table {
     display: table;
@@ -222,12 +224,28 @@
   .gap-1\.5 {
     gap: calc(var(--spacing) * 1.5);
   }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
   .rounded-xs {
     border-radius: var(--radius-xs);
   }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
+  .border-amber-500 {
+    border-color: var(--color-amber-500);
+  }
+  .bg-amber-200 {
+    background-color: var(--color-amber-200);
   }
   .bg-primary {
     background-color: var(--color-primary);
@@ -301,48 +319,84 @@
       }
     }
   }
-  .hover\:text-primary-tint-5 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-primary-tint-5);
-      }
-    }
-  }
-  .hover\:underline {
-    &:hover {
-      @media (hover: hover) {
-        text-decoration-line: underline;
-      }
-    }
-  }
   .active\:stroke-dark-gray {
     &:active {
       stroke: var(--color-dark-gray);
     }
   }
-  .lg\:\!static {
+  .lg\:flex {
     @media (width >= 64rem) {
-      position: static !important;
+      display: flex;
     }
   }
-  .lg\:static {
+  .lg\:h-1\/2 {
     @media (width >= 64rem) {
-      position: static;
+      height: calc(1/2 * 100%);
     }
   }
-  .lg\:hidden {
+  .lg\:w-2 {
     @media (width >= 64rem) {
-      display: none;
+      width: calc(var(--spacing) * 2);
     }
   }
-  .lg\:\!opacity-100 {
+  .lg\:w-12 {
     @media (width >= 64rem) {
-      opacity: 100% !important;
+      width: calc(var(--spacing) * 12);
     }
   }
-  .lg\:opacity-100 {
+  .lg\:w-16 {
     @media (width >= 64rem) {
-      opacity: 100%;
+      width: calc(var(--spacing) * 16);
+    }
+  }
+  .lg\:w-18 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 18);
+    }
+  }
+  .lg\:w-20 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 20);
+    }
+  }
+  .lg\:w-24 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 24);
+    }
+  }
+  .lg\:items-center {
+    @media (width >= 64rem) {
+      align-items: center;
+    }
+  }
+  .lg\:justify-around {
+    @media (width >= 64rem) {
+      justify-content: space-around;
+    }
+  }
+  .lg\:justify-center {
+    @media (width >= 64rem) {
+      justify-content: center;
+    }
+  }
+  .lg\:gap-1\.5 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 1.5);
+    }
+  }
+  .lg\:gap-6 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 6);
+    }
+  }
+  .lg\:p-0 {
+    @media (width >= 64rem) {
+      padding: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:py-0 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 0);
     }
   }
 }
@@ -355,35 +409,50 @@
     font-family: InterVariable, sans-serif;
   }
 }
-nav.menu {
-  pointer-events: none;
-  position: fixed;
-  inset-inline: calc(var(--spacing) * 0);
-  top: calc(var(--spacing) * 0);
-  z-index: 2;
-  display: flex;
-  height: 100vh;
-  --tw-translate-y: -100%;
-  translate: var(--tw-translate-x) var(--tw-translate-y);
-  transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color-primary-shade-1);
-  opacity: 0%;
-  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
-  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-  transition-duration: var(--tw-duration, var(--default-transition-duration));
-  --tw-duration: 400ms;
-  transition-duration: 400ms;
-  --tw-ease: var(--ease-in-out);
-  transition-timing-function: var(--ease-in-out);
-}
-nav.menu.menu-open {
-  pointer-events: auto;
-  --tw-translate-y: calc(var(--spacing) * 0);
-  translate: var(--tw-translate-x) var(--tw-translate-y);
-  opacity: 100%;
+@media (max-width: 992px) {
+  .menu-toggle {
+    display: block;
+  }
+  nav.menu {
+    pointer-events: none;
+    position: fixed;
+    inset-inline: calc(var(--spacing) * 0);
+    top: calc(var(--spacing) * 0);
+    z-index: 2;
+    display: flex;
+    height: 100vh;
+    --tw-translate-y: -100%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary-shade-1);
+    opacity: 0%;
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-duration: 400ms;
+    transition-duration: 400ms;
+    --tw-ease: var(--ease-in-out);
+    transition-timing-function: var(--ease-in-out);
+  }
+  nav.menu.menu-open {
+    pointer-events: auto;
+    --tw-translate-y: calc(var(--spacing) * 0);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+    opacity: 100%;
+  }
+  nav.menu ul li a {
+    padding: calc(var(--spacing) * 2);
+    color: var(--color-white);
+    &:active {
+      color: var(--color-primary-tint-5);
+    }
+    &:active {
+      text-decoration-line: underline;
+    }
+  }
 }
 .menu li {
   margin: 25px 0;

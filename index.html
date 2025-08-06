@@ -10,7 +10,9 @@
   </head>
 
   <body class="text-neutral-gray">
-    <header class="text-dark-gray flex justify-between px-4 py-2.5">
+    <header
+      class="text-dark-gray flex justify-between px-4 py-2.5 lg:items-center lg:justify-around lg:p-0"
+    >
       <div>
         <p
           class="text-secondary flex items-center gap-1.5 p-2 text-3xl font-bold"
@@ -55,7 +57,7 @@
           aria-label="Open menu"
           aria-expanded="false"
           data-menu-toggle
-          class="menu-toggle absolute top-2 right-2 z-20 cursor-pointer"
+          class="menu-toggle absolute top-2 right-2 z-20 hidden cursor-pointer"
         >
           <svg
             class="stroke-primary hover:stroke-dark-gray menu-icon active:stroke-dark-gray"
@@ -69,42 +71,22 @@
             <path class="bottom-bar bar" d="M4 18L20 18" ... />
           </svg>
         </button>
-        <nav data-menu class="menu">
-          <ul class="leading-4 font-medium">
-            <li>
-              <a
-                href="#"
-                class="hover:text-primary-tint-5 p-2 text-white hover:underline"
-                >Home</a
-              >
+        <nav data-menu class="menu lg:flex lg:items-center lg:gap-6">
+          <ul class="leading-4 font-medium lg:flex lg:gap-1.5">
+            <li class="lg:w-20">
+              <a href="#" class="text-dark-gray">Home</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="hover:text-primary-tint-5 p-2 text-white hover:underline"
-                >Features</a
-              >
+              <a href="#" class="text-dark-gray">Features</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="hover:text-primary-tint-5 p-2 text-white hover:underline"
-                >Community</a
-              >
+              <a href="#" class="text-dark-gray">Community</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="hover:text-primary-tint-5 p-2 text-white hover:underline"
-                >Blog</a
-              >
+              <a href="#" class="text-dark-gray">Blog</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="hover:text-primary-tint-5 p-2 text-white hover:underline"
-                >Pricing</a
-              >
+              <a href="#" class="text-dark-gray">Pricing</a>
             </li>
           </ul>
           <button
