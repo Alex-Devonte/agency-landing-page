@@ -115,7 +115,7 @@
     <footer>
       <div class="bg-silver py-6">
         <h2
-          class="text-neutral-black text-center text-2xl font-bold lg:text-[45px]"
+          class="text-neutral-black text-center text-2xl font-bold md:text-4xl lg:text-[45px]"
         >
           Pellentesque suscipit fringilla libero eu.
         </h2>
@@ -139,11 +139,13 @@
           </svg>
         </button>
       </div>
-      <div class="bg-neutral-black text-silver p-5">
+      <div
+        class="bg-neutral-black text-silver p-5 md:grid md:w-full md:grid-cols-2 lg:grid-cols-[1fr_2fr] lg:justify-items-center"
+      >
         <div class="mb-5 flex flex-col gap-5">
           <div>
             <p
-              class="flex items-center gap-1.5 text-2xl font-semibold text-white"
+              class="flex items-center gap-1.5 text-2xl font-semibold text-white md:text-4xl"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -216,7 +218,7 @@
             </a>
           </div>
         </div>
-        <div class="grid grid-cols-2 gap-6">
+        <div class="grid grid-cols-2 gap-6 lg:grid-cols-3">
           <div>
             <h4 class="mb-5 text-xl font-semibold text-white">Company</h4>
             <ul class="flex flex-col gap-2 font-extralight">
@@ -237,15 +239,17 @@
               <li><a href="#">Status</a></li>
             </ul>
           </div>
-          <div class="col-span-full">
+          <div class="col-span-full lg:col-auto">
             <h4 class="mb-5 text-xl font-semibold text-white">
               Stay up to date
             </h4>
             <div class="relative inline-block">
               <input
                 type="email"
+                name="email"
+                autocomplete="email"
                 placeholder="Your email address"
-                class="rounded-md bg-[rgba(255,255,255,0.2)] p-2 pr-8 text-white"
+                class="w-full rounded-md bg-[rgba(255,255,255,0.2)] p-2 pr-8 text-white"
               />
               <svg
                 class="pointer-events-none absolute top-1/2 right-1.5 -translate-y-1/2"
