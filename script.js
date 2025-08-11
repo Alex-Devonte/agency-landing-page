@@ -27,4 +27,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   menuToggleBtn.addEventListener("click", toggleMenu);
+
+  const swiper = new Swiper(".swiper", {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
 });
