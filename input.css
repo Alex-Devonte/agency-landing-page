@@ -125,3 +125,13 @@
 .menu-toggle.menu-active .bottom-bar {
   transform: translateY(-6px) rotate(-45deg);
 }
+
+/*Swiper*/
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+  background-color: var(--color-primary);
+  opacity: 0.3 !important;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--color-primary);
+}

@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="output.css" />
     <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <title>Nexcent</title>
   </head>
 
@@ -111,11 +116,53 @@
         </nav>
       </div>
     </header>
-    <main class="flex-1"></main>
+    <main class="flex-1">
+      <!-- Slider main container -->
+      <div class="swiper w-full">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div
+              class="bg-silver h-[630px] p-5 lg:flex lg:items-center lg:justify-center lg:gap-28"
+            >
+              <div
+                class="mb-10 flex flex-col items-baseline justify-center gap-5"
+              >
+                <h1
+                  class="text-dark-gray text-4xl font-semibold md:text-[45px] lg:text-[70px]"
+                >
+                  Lessons and insights<br />
+                  <span class="text-primary">from 8 years</span>
+                </h1>
+                <p class="font-light">
+                  Where to grow your business as a photographer: site or social
+                  media?
+                </p>
+                <button
+                  class="bg-primary flex cursor-pointer items-center gap-1.5 rounded-xs px-6 py-2.5 font-light text-white"
+                >
+                  Register
+                </button>
+              </div>
+              <div class="">
+                <img
+                  src="images/Illustration.png"
+                  class="mx-auto h-[300px] lg:h-[450px] lg:w-[440px]"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </main>
     <footer>
       <div class="bg-silver py-6">
         <h2
-          class="text-neutral-black text-center text-2xl font-bold md:text-4xl lg:text-[45px]"
+          class="text-neutral-black text-center text-4xl font-bold md:text-[45px]"
         >
           Pellentesque suscipit fringilla libero eu.
         </h2>
@@ -283,6 +330,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
