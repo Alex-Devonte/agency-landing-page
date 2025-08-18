@@ -14,6 +14,12 @@
   }
 }
 
+@layer components {
+  .section-container {
+    @apply mx-auto mt-7 max-w-7xl p-5;
+  }
+}
+
 @theme {
   --color-neutral-black: #263238;
   --color-dark-gray: #4d4d4d;
