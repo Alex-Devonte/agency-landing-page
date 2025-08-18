@@ -15,105 +15,107 @@
   </head>
 
   <body class="text-neutral-gray flex min-h-screen flex-col">
-    <header
-      class="text-dark-gray flex justify-between px-4 py-2.5 lg:items-center lg:justify-around lg:p-0"
-    >
-      <div>
-        <p
-          class="text-secondary flex items-center gap-1.5 p-2 text-3xl font-bold"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="17"
-            viewBox="0 0 25 17"
-            fill="none"
+    <header class="text-dark-gray">
+      <div
+        class="section-container mt-0 flex justify-between p-1 lg:items-center lg:p-0"
+      >
+        <div>
+          <p
+            class="text-secondary flex items-center gap-1.5 p-2 text-3xl font-bold"
           >
-            <path
-              d="M13.3106 9.17145L9.55809 15.5982L5.80565 9.17145H13.3106ZM14.3158 8.59705H4.79633L9.55809 16.7349L14.3158 8.59705Z"
-              fill="#263238"
-            />
-            <path
-              d="M19.8347 1.17808L23.5871 7.60481H16.0822L19.8347 1.17808ZM19.8347 0.0292969L15.0729 8.16715H24.5964L19.8347 0.0292969Z"
-              fill="#263238"
-            />
-            <path
-              d="M0.234009 0.0292969L4.2266 7.22725L8.58952 0.210039L0.234009 0.0292969Z"
-              fill="#4CAF4F"
-            />
-            <path
-              d="M9.55825 0.659912L13.7462 7.8177H5.36218L9.55825 0.659912Z"
-              fill="#4CAF4F"
-            />
-            <path
-              d="M14.8247 9.38037L19.0167 16.735H10.4332L14.6944 9.38037H14.8247Z"
-              fill="#4CAF4F"
-            />
-            <path
-              d="M15.7322 8.93445L19.8347 16.1766L23.9941 8.93445H15.7322Z"
-              fill="#4CAF4F"
-            />
-          </svg>
-          Nexcent
-        </p>
-      </div>
-      <div class="relative">
-        <button
-          aria-label="Open menu"
-          aria-expanded="false"
-          data-menu-toggle
-          class="menu-toggle absolute top-2 right-2 z-20 hidden cursor-pointer"
-        >
-          <svg
-            class="stroke-primary hover:stroke-dark-gray menu-icon active:stroke-dark-gray"
-            xmlns="http://www.w3.org/2000/svg"
-            width="36"
-            height="36"
-            viewBox="0 0 24 24"
-          >
-            <path class="top-bar bar" d="M4 6L20 6" ... />
-            <path class="middle-bar bar" d="M4 12L20 12" ... />
-            <path class="bottom-bar bar" d="M4 18L20 18" ... />
-          </svg>
-        </button>
-        <nav data-menu class="menu lg:flex lg:items-center lg:gap-6">
-          <ul class="leading-4 font-medium lg:flex lg:gap-1.5">
-            <li class="lg:w-20">
-              <a href="#" class="text-dark-gray">Home</a>
-            </li>
-            <li>
-              <a href="#" class="text-dark-gray">Features</a>
-            </li>
-            <li>
-              <a href="#" class="text-dark-gray">Community</a>
-            </li>
-            <li>
-              <a href="#" class="text-dark-gray">Blog</a>
-            </li>
-            <li>
-              <a href="#" class="text-dark-gray">Pricing</a>
-            </li>
-          </ul>
-          <button
-            class="bg-primary flex cursor-pointer items-center gap-1.5 rounded-xs px-6 py-2.5 font-light text-white"
-          >
-            Register Now
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="12"
-              height="12"
-              viewBox="0 0 12 12"
+              width="25"
+              height="17"
+              viewBox="0 0 25 17"
               fill="none"
             >
               <path
-                d="M8.52565 8.47046L10.2448 6.75135C10.4486 6.54747 10.4486 6.21692 10.2448 6.01304L8.52565 4.29393M10.0918 6.3822L2.43489 6.3822"
-                stroke="white"
-                stroke-width="1"
-                stroke-linecap="round"
+                d="M13.3106 9.17145L9.55809 15.5982L5.80565 9.17145H13.3106ZM14.3158 8.59705H4.79633L9.55809 16.7349L14.3158 8.59705Z"
+                fill="#263238"
+              />
+              <path
+                d="M19.8347 1.17808L23.5871 7.60481H16.0822L19.8347 1.17808ZM19.8347 0.0292969L15.0729 8.16715H24.5964L19.8347 0.0292969Z"
+                fill="#263238"
+              />
+              <path
+                d="M0.234009 0.0292969L4.2266 7.22725L8.58952 0.210039L0.234009 0.0292969Z"
+                fill="#4CAF4F"
+              />
+              <path
+                d="M9.55825 0.659912L13.7462 7.8177H5.36218L9.55825 0.659912Z"
+                fill="#4CAF4F"
+              />
+              <path
+                d="M14.8247 9.38037L19.0167 16.735H10.4332L14.6944 9.38037H14.8247Z"
+                fill="#4CAF4F"
+              />
+              <path
+                d="M15.7322 8.93445L19.8347 16.1766L23.9941 8.93445H15.7322Z"
+                fill="#4CAF4F"
               />
             </svg>
+            Nexcent
+          </p>
+        </div>
+        <div class="relative">
+          <button
+            aria-label="Open menu"
+            aria-expanded="false"
+            data-menu-toggle
+            class="menu-toggle absolute top-2 right-2 z-20 hidden cursor-pointer"
+          >
+            <svg
+              class="stroke-primary hover:stroke-dark-gray menu-icon active:stroke-dark-gray"
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              viewBox="0 0 24 24"
+            >
+              <path class="top-bar bar" d="M4 6L20 6" ... />
+              <path class="middle-bar bar" d="M4 12L20 12" ... />
+              <path class="bottom-bar bar" d="M4 18L20 18" ... />
+            </svg>
           </button>
-        </nav>
+          <nav data-menu class="menu lg:flex lg:items-center lg:gap-6">
+            <ul class="leading-4 font-medium lg:flex lg:gap-1.5">
+              <li class="lg:w-20">
+                <a href="#" class="text-dark-gray">Home</a>
+              </li>
+              <li>
+                <a href="#" class="text-dark-gray">Features</a>
+              </li>
+              <li>
+                <a href="#" class="text-dark-gray">Community</a>
+              </li>
+              <li>
+                <a href="#" class="text-dark-gray">Blog</a>
+              </li>
+              <li>
+                <a href="#" class="text-dark-gray">Pricing</a>
+              </li>
+            </ul>
+            <button
+              class="bg-primary flex cursor-pointer items-center gap-1.5 rounded-xs px-6 py-2.5 font-light text-white"
+            >
+              Register Now
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M8.52565 8.47046L10.2448 6.75135C10.4486 6.54747 10.4486 6.21692 10.2448 6.01304L8.52565 4.29393M10.0918 6.3822L2.43489 6.3822"
+                  stroke="white"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </nav>
+        </div>
       </div>
     </header>
     <main class="flex-1">
@@ -122,9 +124,9 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
-          <div class="swiper-slide">
+          <div class="swiper-slide bg-silver">
             <div
-              class="bg-silver h-[630px] p-5 lg:flex lg:items-center lg:justify-center lg:gap-28"
+              class="section-container h-[630px] p-5 lg:flex lg:items-center lg:justify-center lg:gap-28"
             >
               <div
                 class="mb-10 flex flex-col items-baseline justify-center gap-5"
@@ -159,7 +161,7 @@
         <div class="swiper-pagination"></div>
       </div>
       <section>
-        <div class="mt-7 p-5">
+        <div class="section-container">
           <div class="text-center">
             <h2 class="text-dark-gray mb-2 text-4xl font-semibold">
               Our Clients
@@ -181,7 +183,7 @@
         </div>
       </section>
       <section>
-        <div class="mt-7 p-5">
+        <div class="section-container">
           <div class="text-center">
             <h2 class="text-dark-gray mb-2 text-4xl font-semibold">
               Manage your entire community in a single system
@@ -226,16 +228,16 @@
       </section>
       <section>
         <div
-          class="mt-7 p-5 md:flex md:flex-col lg:mx-auto lg:flex-row lg:justify-between xl:w-3/4"
+          class="section-container lg:justify-betwee flex flex-col items-center gap-10 lg:flex-row"
         >
-          <div class="mb-5 md:mx-auto">
+          <div class="mx-auto md:w-3/5">
             <img src="images/mobile_login.png" />
           </div>
-          <div class="lg:w-1/2">
-            <h2 class="text-dark-gray my-3 text-4xl font-semibold xl:w-1/2">
+          <div class="lg:w-3/4">
+            <h2 class="text-dark-gray my-3 text-4xl font-semibold">
               The unseen of spending three years at Pixelgrade
             </h2>
-            <p class="my-6 xl:w-3/4">
+            <p class="my-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
               amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
               Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
@@ -251,13 +253,11 @@
           </div>
         </div>
       </section>
-      <section>
-        <div
-          class="bg-silver mt-7 p-5 py-16 lg:grid lg:grid-cols-2 lg:place-items-center"
-        >
+      <section class="bg-silver">
+        <div class="section-container py-16 lg:grid lg:grid-cols-2">
           <div class="mb-5 text-center lg:text-left">
             <h2 class="text-dark-gray text-4xl font-semibold">
-              Helping a local
+              Helping a local <br />
               <span class="text-primary">business reinvent itself</span>
             </h2>
             <p class="mt-4 text-black">
@@ -322,16 +322,16 @@
       </section>
       <section>
         <div
-          class="mt-7 flex flex-col items-center gap-10 p-5 lg:mx-auto lg:flex-row lg:justify-between xl:w-3/4"
+          class="section-container flex flex-col items-center gap-10 lg:flex-row lg:justify-between"
         >
-          <div class="mx-auto">
+          <div class="mx-auto md:w-3/5">
             <img src="images/pana.png" />
           </div>
-          <div class="lg:w-1/2">
+          <div class="lg:w-3/4">
             <h2 class="text-dark-gray mb-7 text-4xl font-semibold">
               How to design your site footer like we did
             </h2>
-            <p class="mb-7 xl:w-3/4">
+            <p class="mb-7">
               Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor,
               augue nec tincidunt molestie, massa nunc varius arcu, at
               scelerisque elit erat a magna. Donec quis erat at libero ultrices
@@ -350,16 +350,13 @@
           </div>
         </div>
       </section>
-      <section>
-        <div class="bg-silver mt-7 flex flex-col p-5 lg:mx-auto lg:flex-row">
-          <div class="lg:w-full">
-            <img
-              src="images/tesla.png"
-              class="md:mx-auto lg:h-[400px] lg:w-[400px]"
-            />
+      <section class="bg-silver">
+        <div class="section-container flex flex-col lg:flex-row lg:gap-14">
+          <div class="lg:w-3/5">
+            <img src="images/tesla.png" class="md:mx-auto" />
           </div>
           <div class="flex flex-col justify-around gap-4 lg:w-full">
-            <div class="lg:w-3/4">
+            <div>
               <p class="mb-8">
                 Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
                 lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin
@@ -379,7 +376,7 @@
               </p>
             </div>
             <div
-              class="grid grid-cols-3 md:[grid-template-columns:repeat(6,1fr)_auto] lg:w-3/4 lg:items-start"
+              class="grid grid-cols-3 md:[grid-template-columns:repeat(6,1fr)_auto] lg:items-start"
             >
               <img src="icons/logo_ipsum.png" alt="Client Logo" />
               <img src="icons/logo_ipsum.png" alt="Client Logo" />
@@ -411,7 +408,7 @@
         </div>
       </section>
       <section>
-        <div class="mt-7 mb-14 p-5">
+        <div class="section-container mb-14">
           <div class="mb-5 text-center">
             <h2 class="text-dark-gray mb-5 text-4xl font-semibold">
               Caring is the new marketing
@@ -424,9 +421,9 @@
             </p>
           </div>
           <div
-            class="grid gap-12 md:place-items-center lg:mx-auto lg:w-3/4 lg:grid-cols-3"
+            class="grid gap-12 md:place-items-center lg:mx-auto lg:grid-cols-3 lg:gap-0"
           >
-            <div class="relative h-[350px] w-[400px] md:w-[500px]">
+            <div class="relative h-[350px] w-[400px] md:w-[500px] lg:w-auto">
               <img
                 src="images/blog_image1.jpg"
                 class="h-3/4 w-full rounded-md object-cover"
@@ -458,7 +455,7 @@
                 </a>
               </div>
             </div>
-            <div class="relative h-[350px] w-[400px] md:w-[500px]">
+            <div class="relative h-[350px] w-[400px] md:w-[500px] lg:w-auto">
               <img
                 src="images/blog_image2.jpg"
                 class="h-3/4 w-full rounded-md object-cover"
@@ -491,7 +488,7 @@
                 </a>
               </div>
             </div>
-            <div class="relative h-[350px] w-[400px] md:w-[500px]">
+            <div class="relative h-[350px] w-[400px] md:w-[500px] lg:w-auto">
               <img
                 src="images/blog_image3.jpg"
                 class="h-3/4 w-full rounded-md object-cover"
@@ -527,7 +524,7 @@
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="bg-neutral-black">
       <div class="bg-silver py-6">
         <h2
           class="text-neutral-black text-center text-4xl font-bold md:text-[45px] lg:text-[70px]"
@@ -555,7 +552,7 @@
         </button>
       </div>
       <div
-        class="bg-neutral-black text-silver p-5 md:grid md:w-full md:grid-cols-2 lg:grid-cols-[1fr_2fr] lg:justify-items-center"
+        class="text-silver section-container p-5 md:grid md:w-full md:grid-cols-2 lg:grid-cols-[1fr_2fr] lg:justify-items-center"
       >
         <div class="mb-5 flex flex-col gap-5">
           <div>
