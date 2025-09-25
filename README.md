@@ -1,7 +1,7 @@
 
-# Agency Landing Page
+# SaaS Landing Page
 
-A modern responsive agency landing page built with HTML, CSS, and Tailwind from a Figma design.  
+A modern responsive SaaS landing page built with HTML, CSS, and Tailwind from a Figma design.  
 
 ##  Live Demo
 [View Site Here](https://alex-devonte.github.io/agency-landing-page/)
